@@ -1,9 +1,33 @@
 
 ## Introduces the game: 3am
 print("------ 3 am -------")
-print("""You wake up and the front door is wide open. The apartment is cold.
-You look at the alarm clock and it's 3:00am.\n Get up? \n Go back to sleep? """)
-print("")
+
+
+
+
+def shadowy_figure():
+    print("You walk up to the shadowy figure.")
+    print("He has no face.")
+    print("He hands you a business card with his name on it: Mr. Beautiful.")
+    print("You read the card, \"I make people disappear.\"")
+    print("")
+
+    while True:
+        print("You have a choice.")
+        print("- Punch.")
+        print("- Run.")
+
+
+
+        move4 = input("> ")
+
+        if move4 == "punch":
+            dead("You throw a jab, cross, lead-hook, uppercut combo, and Mr. Beautiful runs away crying.")
+        elif "run":
+            dead("You run away and go back into your apartment.")
+        else:
+            print("You have to do something.")
+
 
 # create a function for going outside
 def outside_1():
@@ -28,6 +52,7 @@ def outside_1():
             print("You walk toward the shadowy figure.")
             print("")
             shadowy_figure()
+
 
         if move3 == "east":
             print("You don't want to go back up the stairs right now.")
@@ -103,7 +128,7 @@ def got_up():
 
 # create a function for dead
 def dead(why):
-    print(why, "Try again.")
+    print(why, "Game over. You win.")
     exit(0)
 
 # Game start function, which is called below this block of code.
